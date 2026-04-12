@@ -134,8 +134,8 @@
             <div class="footer-col">
                 <h3>Información de Contacto</h3>
                 <ul>
-                    <li>📍 Av. Principal 1234, CABA</li>
-                    <li>📱 +54 9 11 1234-5678</li>
+                    <li>📍Yrigoyen 2418,Ctes. Cap.</li>
+                    <li>📱 +54 9 3794 123456789</li>
                     <li>✉️ contacto@westsidestyle.com.ar</li>
                 </ul>
             </div>
