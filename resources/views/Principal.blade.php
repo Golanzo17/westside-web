@@ -30,7 +30,7 @@
     <!-- 1. Principal -->
     <section id="principal" class="hero-section">
         <div class="hero-overlay"></div>
-        <img src="\images\WhatsApp Image 2026-04-11 at 23.11.43.jpeg" alt="Westside Hero" class="hero-bg">
+        <img src="/images/baners/banner2.png" alt="Westside Hero" class="hero-bg">
         <div class="hero-content gs-reveal">
             <h1 class="title-impact">WESTSIDE</h1>
             <p>Streetwear & Premium Barber</p>
@@ -92,7 +92,7 @@
                 <div class="product-card gs-fade-up">
                     <div class="placeholder-img">Espacio para Foto</div>
                     <div class="product-info">
-                        <h4>Buzo Essential</h4>
+                        <h4>Buzo Altered</h4>
                     </div>
                 </div>
                 <div class="product-card gs-fade-up">
