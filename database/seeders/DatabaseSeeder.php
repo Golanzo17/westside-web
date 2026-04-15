@@ -33,9 +33,9 @@ class DatabaseSeeder extends Seeder
 Confeccionado en algodón frisado de alta calidad, ofrece abrigo suave por dentro, ideal para los días frescos. Presenta detalles gráficos imponentes: número "00" y texto "VISION" al frente, estampas en mangas tipo llamas y frase en el cuello para un plus de identidad visual.',
              'stock' => 15, // Aquí agregamos el stock
             'precio' => 45000.00, 
-            'imagen_frente' => '/images/product.png',
-            'imagen_espalda' => '/images/product-back.png', // Opcional, si la tienes
-            'imagen_detalle' => null // Podemos poner 'null' si no tenemos foto de detalle aún
+            'imagen_frente' => '/images/Catalogo/ropa/Buzo-Altered.webp',
+            'imagen_espalda' => '/images/Catalogo/ropa/Buzo-Altered-detalle.webp', // Opcional, si la tienes
+            'imagen_detalle' => '/images/Catalogo/ropa/Buzo-Altered-dorso.webp' // Podemos poner 'null' si no tenemos foto de detalle aún
         ]);
 
          // ---- PRODUCTO 2: REMERAS ----
@@ -48,8 +48,8 @@ Confeccionada en jersey puro algodón, con calce Boxy y estampa en serigrafía e
             'stock' => 30, // Tenemos bastantes remeras
             'precio' => 24000.00, 
             
-            'imagen_frente' => '/images/product.png',
-            'imagen_espalda' => null, 
+            'imagen_frente' => '/images/Catalogo/ropa/Remera-Trewa-Boxy.webp',
+            'imagen_espalda' => '/images/Catalogo/ropa/Remera-Trewa-Dorso.webp', 
             'imagen_detalle' => null 
         ]);
 
@@ -61,9 +61,9 @@ Confeccionada en jersey puro algodón, con calce Boxy y estampa en serigrafía e
             'stock' => 8, // Quedan pocos
             'precio' => 55000.00, 
             
-            'imagen_frente' => '/images/product.png',
-            'imagen_espalda' => '/images/product-back.png', 
-            'imagen_detalle' => '/images/product-detail.png' 
+            'imagen_frente' => '/images/Catalogo/ropa/Jean-Resilence.jpeg',
+            'imagen_espalda' => '/images/Catalogo/ropa/Jean-Resilence-Dorso.jpeg', 
+            'imagen_detalle' => '/images/Catalogo/ropa/Jean-Resilence-Detalle.jpeg' 
         ]);
     }
 }

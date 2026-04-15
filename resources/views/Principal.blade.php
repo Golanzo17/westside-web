@@ -83,24 +83,28 @@
         <div class="container text-center">
             <h2 class="gs-fade-up">Catálogo Visual</h2>
             <div class="product-grid">
-                <div class="product-card gs-fade-up">
-                    <img src="/images/product.png" alt="Producto 1">
-                    <div class="product-info">
-                        <h4>Camiseta Overiszed Dark</h4>
+                        
+                
+                @foreach ($productos as $producto)
+                    <div class="product-card gs-fade-up">
+                        <!-- Mostramos la imagen (Si no hay foto, ponemos la de tu web por defecto) -->
+                        @if($producto->imagen_frente)
+                            <img src="{{ $producto->imagen_frente }}" alt="{{ $producto->nombre }}">
+                        @else
+                            <div class="placeholder-img">Falta Foto</div>
+                        @endif
+
+                        <div class="product-info">
+                            <!-- Mostramos el Título y ahora sumamos el Precio! -->
+                            <h4>{{ $producto->nombre }}</h4>
+                            <p class="product-price" style="font-weight: bold; margin-top: 5px;">
+                                $ {{ number_format($producto->precio, 0, ',', '.') }}
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="product-card gs-fade-up">
-                    <div class="placeholder-img">Espacio para Foto</div>
-                    <div class="product-info">
-                        <h4>Buzo Altered</h4>
-                    </div>
-                </div>
-                <div class="product-card gs-fade-up">
-                    <div class="placeholder-img">Espacio para Foto</div>
-                    <div class="product-info">
-                        <h4>Cargo Pants</h4>
-                    </div>
-                </div>
+                @endforeach
+
+
             </div>
         </div>
     </section>
