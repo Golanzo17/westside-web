@@ -1,31 +1,9 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Westside - Streetwear & Barbería</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Impact&display=swap" rel="stylesheet">
-    
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
+@include('partes.head')
 <body>
 
-    <!-- Navegación -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">WESTSIDE</div>
-            <ul class="nav-links">
-                <li><a href="#principal">Principal</a></li>
-                <li><a href="#quienes-somos">Quienes Somos</a></li>
-                <li><a href="#comercializacion">Comercialización</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#consultas" class="btn-primary">Consultas</a></li>
-            </ul>
-        </div>
-    </nav>
+    @include('partes.nav')
 
     <!-- 1. Principal -->
     <section id="principal" class="hero-section">
@@ -45,7 +23,7 @@
                 <h2>Cultura & Estilo</h2>
                 <p>Nacidos en la calle, elevados por el detalle. Westside no es solo una marca de ropa ni solo una barbería. Somos el punto de encuentro donde nacen las tendencias de la ciudad. Combinamos estética urbana moderna con la atención premium de una barbería clásica.</p>
                 <div class="image-box">
-                    <img src="/images/barberia/WestSide Barber.jpg" alt="logo Barbería Westside">
+                    <img src="/images/barberia/Barber-logo-2.png" alt="logo Barbería Westside">
                 </div>
             </div>
             <div class="image-content gs-slide-right">
@@ -128,34 +106,7 @@
         </div>
     </section>
 
-    <!-- Footer: 4. Contactos y 5. Términos -->
-    <footer class="footer">
-        <div class="container footer-grid gs-fade-up">
-            <div class="footer-col">
-                <h3>Información de Contacto</h3>
-                <ul>
-                    <li>📍Yrigoyen 2418,Ctes. Cap.</li>
-                    <li>📱 +54 9 3795 193973 </li>
-                    <li>✉️ westside.ctes@gmail.com</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Enlaces Legales</h3>
-                <ul>
-                    <li><a href="#">Términos y Usos</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Políticas de Devolución</a></li>
-                </ul>
-            </div>
-            <div class="footer-col brand-col">
-                <h2 class="title-impact">WESTSIDE</h2>
-                <p>Est. 2026</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Westside. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    @include('partes.footer')
 
 </body>
 </html>
