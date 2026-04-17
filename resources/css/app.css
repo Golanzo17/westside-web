@@ -308,11 +308,92 @@ img {
   margin-bottom: 60px;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+/* ESTILOS DEL CARRUSEL */
+.carousel-wrapper {
+  position: relative;
+  max-width: 100%;
+  padding: 0 50px; /* Espacio para los botones */
 }
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 20px 0 40px 0; /* Espacio para shadow y scrollbar */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-darker);
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Las cards dentro del carrusel ahora tienen ancho fijo */
+.carousel-container > .product-card,
+.carousel-container > div > .product-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.carousel-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-dark);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    padding: 0;
+  }
+  .carousel-btn {
+    display: none; /* En móviles usamos scroll táctil */
+  }
+}
+
 
 .product-card {
   background-color: var(--bg-card);

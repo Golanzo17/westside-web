@@ -56,29 +56,39 @@
     <section id="catalogo" class="catalog-section">
         <div class="container text-center">
             <h2 class="gs-fade-up">Catálogo Visual</h2>
-            <div class="product-grid">
-                        
+            
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" onclick="document.getElementById('product-carousel').scrollBy({left: -330, behavior: 'smooth'})">❮</button>
                 
-                @foreach ($productos as $producto)
-                    <div class="product-card gs-fade-up">
-                        <!-- Mostramos la imagen (Si no hay foto, ponemos la de tu web por defecto) -->
-                        @if($producto->imagen_frente)
-                            <img src="{{ $producto->imagen_frente }}" alt="{{ $producto->nombre }}">
-                        @else
-                            <div class="placeholder-img">Falta Foto</div>
-                        @endif
+                <div class="carousel-container" id="product-carousel">
+                    
+                    {{-- CÓDIGO DINÁMICO (COMENTADO PARA AHORA)
+                    @foreach ($productos as $producto)
+                        <div class="product-card gs-fade-up">
+                            <!-- Mostramos la imagen (Si no hay foto, ponemos la de tu web por defecto) -->
+                            @if($producto->imagen_frente)
+                                <img src="{{ $producto->imagen_frente }}" alt="{{ $producto->nombre }}">
+                            @else
+                                <div class="placeholder-img">Falta Foto</div>
+                            @endif
 
-                        <div class="product-info">
-                            <!-- Mostramos el Título y ahora sumamos el Precio! -->
-                            <h4>{{ $producto->nombre }}</h4>
-                            <p class="product-price" style="font-weight: bold; margin-top: 5px;">
-                                $ {{ number_format($producto->precio, 0, ',', '.') }}
-                            </p>
+                            <div class="product-info">
+                                <!-- Mostramos el Título y ahora sumamos el Precio! -->
+                                <h4>{{ $producto->nombre }}</h4>
+                                <p class="product-price" style="font-weight: bold; margin-top: 5px;">
+                                    $ {{ number_format($producto->precio, 0, ',', '.') }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                    --}}
 
+                    <!-- PRODUCTOS ESTÁTICOS -->
+                    @include('partes.productos_estaticos')
 
+                </div>
+                
+                <button class="carousel-btn next" onclick="document.getElementById('product-carousel').scrollBy({left: 330, behavior: 'smooth'})">❯</button>
             </div>
         </div>
     </section>
