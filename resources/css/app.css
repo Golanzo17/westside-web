@@ -143,7 +143,7 @@ img {
     display: none;
   }
 
-  /* En una app real de prod haríamos un menú hamburguesa */
+
 }
 
 /* 1. PRINCIPAL (HERO) */
@@ -312,7 +312,8 @@ img {
 .carousel-wrapper {
   position: relative;
   max-width: 100%;
-  padding: 0 50px; /* Espacio para los botones */
+  padding: 0 50px;
+  /* Espacio para los botones */
 }
 
 .carousel-container {
@@ -321,7 +322,8 @@ img {
   gap: 30px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 20px 0 40px 0; /* Espacio para shadow y scrollbar */
+  padding: 20px 0 40px 0;
+  /* Espacio para shadow y scrollbar */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--border-color) var(--bg-darker);
@@ -346,8 +348,8 @@ img {
 }
 
 /* Las cards dentro del carrusel ahora tienen ancho fijo */
-.carousel-container > .product-card,
-.carousel-container > div > .product-card {
+.carousel-container>.product-card,
+.carousel-container>div>.product-card {
   flex: 0 0 300px;
   scroll-snap-align: start;
 }
@@ -389,8 +391,10 @@ img {
   .carousel-wrapper {
     padding: 0;
   }
+
   .carousel-btn {
-    display: none; /* En móviles usamos scroll táctil */
+    display: none;
+    /* En móviles usamos scroll táctil */
   }
 }
 
@@ -541,4 +545,115 @@ img {
 .gs-slide-right,
 .gs-fade-up {
   visibility: hidden;
+}
+
+/* =========================================
+   NUEVOS ESTILOS DEL CATÁLOGO & COMPONENTES 
+   ========================================= */
+
+/* Fondo de la página de Catálogo */
+body.catalog-bg {
+  background-color: #050505;
+  background-image:
+    radial-gradient(circle at 50% 10%, #1a1a1a 0%, transparent 80%),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 50px 50px, 50px 50px;
+  background-attachment: fixed;
+}
+
+/* Marca de Agua Background */
+.bg-watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18vw;
+  color: rgba(255, 255, 255, 0.015);
+  font-family: var(--font-impact);
+  text-transform: uppercase;
+  z-index: -1;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+  letter-spacing: 5px;
+}
+
+/* Header de la página de Catálogo */
+.catalog-header-main {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.catalog-header-main h2 {
+  margin-bottom: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Buscador de Productos */
+.search-wrapper {
+  max-width: 400px;
+  margin: 10px auto 0 auto;
+  padding: 0 15px;
+}
+
+.search-field {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid var(--border-color);
+  background: #111;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-field:focus {
+  border-color: var(--text-main);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Contenido / Grilla del Catálogo */
+.catalog-page-container {
+  padding: 20px 0 40px 0;
+  min-height: 50vh;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.message-not-found {
+  display: none;
+  text-align: center;
+  width: 100%;
+  padding: 40px;
+  color: var(--text-muted);
+}
+
+/* Botón 'VER CATÁLOGO COMPLETO' en la página Principal */
+.btn-catalog-action {
+  margin-top: 50px;
+}
+
+.btn-catalog-action a {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  font-family: var(--font-impact);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Helper para el precio */
+.product-price {
+  font-weight: bold;
+  margin-top: 5px;
 }

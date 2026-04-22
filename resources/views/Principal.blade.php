@@ -21,7 +21,10 @@
         <div class="container dual-grid">
             <div class="text-content gs-slide-left">
                 <h2>Cultura & Estilo</h2>
-                <p>Nacidos en la calle, elevados por el detalle. Westside no es solo una marca de ropa ni solo una barbería. Somos el punto de encuentro donde nacen las tendencias de la ciudad. Combinamos estética urbana moderna con la atención premium de una barbería clásica.</p>
+                <p>En WESTSIDE combinamos streetwear + barbería 
+para darte un cambio real.
+
+Te ves mejor. Te sentís distinto.</p>
                 <div class="image-box">
                     <img src="/images/barberia/Barber-logo-2.png" alt="logo Barbería Westside">
                 </div>
@@ -32,25 +35,6 @@
         </div>
     </section>
 
-    <!-- 3. Comercialización -->
-    <section id="comercializacion" class="comercial-section">
-        <div class="container text-center">
-            <h2 class="gs-fade-up">Cómo Trabajamos</h2>
-            <div class="steps-grid">
-                <div class="step-card gs-fade-up">
-                    <div class="step-icon">1</div>
-                    <h3>Venta Minorista</h3>
-                    <p>Adquiere nuestras prendas exclusivas directamente desde nuestra sucursal o con envío a todo el país.</p>
-                </div>
-                
-                <div class="step-card gs-fade-up">
-                    <div class="step-icon">2</div>
-                    <h3>Barbería</h3>
-                    <p>Turnos presenciales con profesionales de primer nivel. Experiencia premium asegurada.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 6. Catálogo de Productos -->
     <section id="catalogo" class="catalog-section">
@@ -62,7 +46,7 @@
                 
                 <div class="carousel-container" id="product-carousel">
                     
-                    {{-- CÓDIGO DINÁMICO (COMENTADO PARA AHORA)
+                    {{-- CÓDIGO DINÁMICO (De prueba, no se usa)
                     @foreach ($productos as $producto)
                         <div class="product-card gs-fade-up">
                             <!-- Mostramos la imagen (Si no hay foto, ponemos la de tu web por defecto) -->
@@ -89,6 +73,31 @@
                 </div>
                 
                 <button class="carousel-btn next" onclick="document.getElementById('product-carousel').scrollBy({left: 330, behavior: 'smooth'})">❯</button>
+            </div>
+
+            <!-- Botón hacia el catálogo completo -->
+            <div class="btn-catalog-action gs-fade-up">
+                <a href="/catalogo" class="btn-primary">VER CATÁLOGO COMPLETO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Comercialización -->
+    <section id="comercializacion" class="comercial-section">
+        <div class="container text-center">
+            <h2 class="gs-fade-up">Cómo Trabajamos</h2>
+            <div class="steps-grid">
+                <div class="step-card gs-fade-up">
+                    <div class="step-icon">1</div>
+                    <h3>Venta Minorista</h3>
+                    <p>Adquiere nuestras prendas exclusivas directamente desde nuestra sucursal o con envío a todo el país.</p>
+                </div>
+                
+                <div class="step-card gs-fade-up">
+                    <div class="step-icon">2</div>
+                    <h3>Barbería</h3>
+                    <p>Turnos presenciales con profesionales de primer nivel. Experiencia premium asegurada.</p>
+                </div>
             </div>
         </div>
     </section>

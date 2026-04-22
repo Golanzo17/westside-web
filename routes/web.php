@@ -12,3 +12,11 @@ Route::get('/', function () {
     // 2. Se los enviamos a tu vista 'Principal'
     return view('Principal', compact('productos'));
 });
+
+Route::get('/catalogo', function () {
+    return view('Catalogo');
+});
+
+Route::get('/principal', function () {
+    return view('Principal');
+});
