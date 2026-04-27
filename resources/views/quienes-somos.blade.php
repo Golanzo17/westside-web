@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es-AR">
 @include('partes.head')
 <body class="catalog-bg">
