@@ -138,3 +138,83 @@ $wspIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="cu
         <p class="product-price">$45.000</p>
     </div>
 </div>
+
+<!-- Cera Brillante -->
+<div class="product-card gs-fade-up" data-category="barbershop">
+    <span class="product-cat-tag">Barbería</span>
+    <span class="product-new-tag">Nuevo</span>
+    <img src="/images/Catalogo/barbershop/cera-brillante.jpg" alt="Cera Brillante">
+    <div class="product-overlay">
+        <a href="#" class="product-overlay-btn">{!! $wspIcon !!} Consultar</a>
+    </div>
+    <div class="product-info">
+        <h4>Cera Brillante</h4>
+        <p class="product-price">$12.000</p>
+    </div>
+</div>
+
+<!-- Cera Mate -->
+<div class="product-card gs-fade-up" data-category="barbershop">
+    <span class="product-cat-tag">Barbería</span>
+    <img src="/images/Catalogo/barbershop/cera-mate.jpg" alt="Cera Mate">
+    <div class="product-overlay">
+        <a href="#" class="product-overlay-btn">{!! $wspIcon !!} Consultar</a>
+    </div>
+    <div class="product-info">
+        <h4>Cera Mate</h4>
+        <p class="product-price">$12.000</p>
+    </div>
+</div>
+
+<!-- Gel Fijador -->
+<div class="product-card gs-fade-up" data-category="barbershop">
+    <span class="product-cat-tag">Barbería</span>
+    <img src="/images/Catalogo/barbershop/gel-fijador.jpg" alt="Gel Fijador">
+    <div class="product-overlay">
+        <a href="#" class="product-overlay-btn">{!! $wspIcon !!} Consultar</a>
+    </div>
+    <div class="product-info">
+        <h4>Gel Fijador</h4>
+        <p class="product-price">$11.000</p>
+    </div>
+</div>
+
+<!-- Máscara Matizadora -->
+<div class="product-card gs-fade-up" data-category="barbershop">
+    <span class="product-cat-tag">Barbería</span>
+    <span class="product-new-tag">Nuevo</span>
+    <img src="/images/Catalogo/barbershop/mascara-matizadora.jpg" alt="Máscara Matizadora">
+    <div class="product-overlay">
+        <a href="#" class="product-overlay-btn">{!! $wspIcon !!} Consultar</a>
+    </div>
+    <div class="product-info">
+        <h4>Máscara Matizadora</h4>
+        <p class="product-price">$18.000</p>
+    </div>
+</div>
+
+<!-- Polvo Texturizador -->
+<div class="product-card gs-fade-up" data-category="barbershop">
+    <span class="product-cat-tag">Barbería</span>
+    <img src="/images/Catalogo/barbershop/polvo-texturizador.jpg" alt="Polvo Texturizador">
+    <div class="product-overlay">
+        <a href="#" class="product-overlay-btn">{!! $wspIcon !!} Consultar</a>
+    </div>
+    <div class="product-info">
+        <h4>Polvo Texturizador</h4>
+        <p class="product-price">$8.500</p>
+    </div>
+</div>
+
+<!-- Shampoo Anticaída -->
+<div class="product-card gs-fade-up" data-category="barbershop">
+    <span class="product-cat-tag">Barbería</span>
+    <img src="/images/Catalogo/barbershop/shampoo-anticaida.jpg" alt="Shampoo Anticaída">
+    <div class="product-overlay">
+        <a href="#" class="product-overlay-btn">{!! $wspIcon !!} Consultar</a>
+    </div>
+    <div class="product-info">
+        <h4>Shampoo Prevención caída</h4>
+        <p class="product-price">$8.500</p>
+    </div>
+</div>

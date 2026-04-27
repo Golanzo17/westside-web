@@ -28,6 +28,7 @@
                 <button class="filter-chip" data-filter="buzos">Buzos</button>
                 <button class="filter-chip" data-filter="chaquetas">Chaquetas</button>
                 <button class="filter-chip" data-filter="chombas">Chombas</button>
+                <button class="filter-chip" data-filter="barbershop">Barbershop</button>
             </div>
         </div>
     </header>

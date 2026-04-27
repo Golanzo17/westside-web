@@ -48,7 +48,7 @@
                     </div>
                     <!-- Imagen 4 -->
                     <div class="story-image" id="story-img-4">
-                        <img src="/images/Quienes-somos/Actitud.jpeg" alt="Historia West Side">
+                        <img src="/images/westside-logo2.jpg" alt="Historia West Side">
                     </div>
                 </div>
             </div>
