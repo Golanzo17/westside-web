@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="es-AR">
-@include('partes.head')
-<body class="catalog-bg">
+@extends('layouts.app')
 
-    <!-- MARCA DE AGUA DE FONDO -->
-    <div class="bg-watermark">WESTSIDE</div>
+@section('content')
 
-    @include('partes.nav')
+
 
     <!-- SECCIÓN COMERCIALIZACIÓN -->
     <section class="legal-section">
@@ -64,104 +60,4 @@
         </div>
     </section>
 
-    @include('partes.footer')
-
-    <!-- ESTILOS ESPECÍFICOS PARA ESTA PÁGINA -->
-    <style>
-        .legal-section {
-            padding-top: calc(var(--nav-height) + 60px);
-            padding-bottom: 100px;
-            position: relative;
-            z-index: 1; /* Por encima de la marca de agua */
-        }
-
-        .legal-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--bg-card);
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-        }
-
-        .legal-container h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-            color: #fff;
-            font-family: var(--font-impact);
-            text-transform: uppercase;
-        }
-
-        .legal-container .text-center {
-            text-align: center;
-        }
-
-        .legal-container .last-update {
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            font-size: 1.1rem;
-        }
-
-        .legal-container h3 {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-family: var(--font-impact);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .legal-container p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            color: #ccc;
-        }
-
-        .legal-container ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .legal-container li {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #ccc;
-            margin-bottom: 10px;
-        }
-
-        .legal-container strong {
-            color: #fff;
-        }
-
-        .legal-container hr {
-            border: 0;
-            height: 1px;
-            background: var(--border-color);
-            margin: 30px 0;
-        }
-
-        .legal-container hr.section-divider {
-            height: 3px;
-            background: #555;
-            margin: 60px 0;
-        }
-
-        @media (max-width: 768px) {
-            .legal-container {
-                padding: 30px 20px;
-                margin: 0 15px;
-            }
-            .legal-container h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</body>
-</html>
+@endsection

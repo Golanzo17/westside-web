@@ -54,43 +54,4 @@
     </div>
 </section>
 
-<style>
-    .opciones-section { padding: 70px 20px; }
-    .opciones-container { max-width: 1100px; margin: 0 auto; }
-    .opciones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-    .opcion-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border-color);
-        border-radius: 20px;
-        padding: 40px 36px;
-        position: relative;
-        transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-    .opcion-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
-    .opcion-num { font-family: var(--font-impact); font-size: 4rem; color: rgba(255,255,255,0.04); position: absolute; top: 20px; right: 28px; line-height: 1; }
-    .opcion-icon-wrap { width: 52px; height: 52px; border-radius: 14px; background: rgba(255,255,255,0.06); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--text-main); }
-    .opcion-icon-wrap svg { width: 26px; height: 26px; }
-    .opcion-card h3 { font-family: var(--font-impact); font-size: 1.5rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-main); margin: 0 0 12px; }
-    .opcion-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; margin: 0 0 22px; }
-    .opcion-beneficios { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 8px; }
-    .opcion-beneficios li { font-size: 0.87rem; color: var(--text-muted); }
-    .btn-wsp-turno {
-        display: inline-flex; align-items: center; gap: 10px;
-        padding: 13px 26px; background: #25D366; color: #fff;
-        font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px;
-        border-radius: 12px; text-decoration: none; border: none;
-        cursor: pointer; transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .btn-wsp-turno:hover { background: #1ebe5a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.35); }
-    .btn-mapa {
-        display: inline-flex; align-items: center; gap: 6px;
-        padding: 11px 22px; background: transparent; color: var(--text-main);
-        font-size: 0.87rem; font-weight: 600; letter-spacing: 0.5px;
-        border: 1px solid var(--border-color); border-radius: 10px;
-        text-decoration: none; transition: border-color 0.3s ease, background 0.3s ease;
-    }
-    .btn-mapa:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.05); }
-    @media (max-width: 900px) {
-        .opciones-grid { grid-template-columns: 1fr; }
-    }
-</style>
+

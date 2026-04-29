@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="es-AR">
-@include('partes.head')
-<body>
+@extends('layouts.app')
 
-    @include('partes.nav')
-
+@section('content')
     <section id="principal" class="hero-section">
         <div class="hero-overlay"></div>
         <img src="/images/baners/banner2.png" alt="Westside Hero" class="hero-bg">
@@ -50,27 +46,7 @@ Te ves mejor. Te sentís distinto.</p>
         </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats-section">
-        <div class="container stats-grid">
-            <div class="stat-item">
-                <span class="stat-number">+625</span>
-                <span class="stat-label">Clientes atendidos</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">2024</span>
-                <span class="stat-label">Año de fundación</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">2</span>
-                <span class="stat-label">Líneas de negocio</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">∞</span>
-                <span class="stat-label">Estilo sin límites</span>
-            </div>
-        </div>
-    </section>
+    @include('partes.stats')
 
     <!-- SEPARADOR -->
     <div class="section-sep">
@@ -135,17 +111,7 @@ Te ves mejor. Te sentís distinto.</p>
 
     @include('partes.ig-cards')
 
-    @include('partes.formulario_contacto')
 
-    @include('partes.footer')
-    <style>
-        /* El overlay y badges son exclusivos del Catálogo — ocultarlos en el carrusel */
-        #product-carousel .product-overlay,
-        #product-carousel .product-cat-tag,
-        #product-carousel .product-new-tag {
-            display: none !important;
-        }
-    </style>
+    
 
-</body>
-</html>
+@endsection

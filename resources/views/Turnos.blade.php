@@ -1,69 +1,58 @@
-<!DOCTYPE html>
-<html lang="es-AR">
-@include('partes.head')
-<body class="catalog-bg">
+@extends('layouts.app')
 
-    <div class="bg-watermark">WESTSIDE</div>
-    @include('partes.nav')
+@section('content')
 
-    <!-- HERO -->
-    <section class="turnos-hero">
-        <div class="turnos-hero-content">
-            <span class="turnos-badge">Barbería West Side</span>
-            <h1 class="turnos-hero-title">Reservá tu Turno</h1>
-            <p class="turnos-hero-sub">Elegí tu servicio, mandanos un mensaje y te confirmamos en minutos.<br>También podés pasarte directo al local.</p>
-        </div>
-    </section>
+
+
+    @include('partes.hero-general', [
+        'badge' => 'Barbería West Side',
+        'title' => 'Reservá tu Turno',
+        'subtitle' => 'Elegí tu servicio, mandanos un mensaje y te confirmamos en minutos.<br>También podés pasarte directo al local.'
+    ])
 
     @include('partes.turnos-servicios')
+
+    {{-- SECCIÓN: Productos de Barbería --}}
+    <section class="barber-shop-products">
+        <div class="barber-shop-products-inner">
+            <div class="barber-section-header">
+                <span class="section-badge">Llevate el look a casa</span>
+                <h2 class="barber-section-title">Productos de Barbería</h2>
+                <p class="barber-section-sub">Los mismos productos que usamos en el local, disponibles para vos.</p>
+            </div>
+            <div class="barber-products-grid" id="barber-products-grid">
+                @include('partes.productos_estaticos_barberia')
+            </div>
+        </div>
+    </section>
 
     @include('partes.turnos-opciones')
 
     @include('partes.turnos-formulario')
 
-    @include('partes.footer')
 
-    <style>
-        .turnos-hero {
-            min-height: 46vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: calc(var(--nav-height) + 60px) 20px 60px;
-        }
-        .turnos-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 50px;
-            padding: 6px 18px;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 22px;
-        }
-        .turnos-hero-title {
-            font-family: var(--font-impact);
-            font-size: clamp(3rem, 8vw, 6rem);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--text-main);
-            line-height: 1;
-            margin: 0 0 20px;
-        }
-        .turnos-hero-sub {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            max-width: 520px;
-            margin: 0 auto;
-        }
-    </style>
 
     <script>
     
-        const WSP_NUMBER = '5493795193973';
+        const WSP_NUMBER = window.WSP;
+
+        // Animación de entrada — catálogo de barbería
+        const barberObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('card-visible');
+                    barberObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0, rootMargin: '0px' });
+
+        document.querySelectorAll('#barber-products-grid .product-card').forEach(card => barberObserver.observe(card));
+
+        // WhatsApp dinámico para productos de barbería
+        document.querySelectorAll('#barber-products-grid .product-overlay-btn').forEach(btn => {
+            const name = btn.closest('.product-card').querySelector('h4').innerText;
+            btn.href = `https://wa.me/${WSP_NUMBER}?text=${encodeURIComponent('Hola! Me interesa el producto de barbería: ' + name + '. ¿Tienen disponibilidad?')}`;
+        });
 
         // Al hacer clic en una tarjeta de servicio, pre-selecciona en el formulario
         document.querySelectorAll('.servicio-card').forEach(card => {
@@ -84,5 +73,4 @@
             `https://wa.me/${WSP_NUMBER}?text=${encodeURIComponent('Hola! Quiero sacar un turno en West Side Barber. ¿Tienen disponibilidad?')}`;
     </script>
 
-</body>
-</html>
+@endsection

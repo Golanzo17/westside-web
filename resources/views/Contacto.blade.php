@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="es-AR">
-@include('partes.head')
-<body class="catalog-bg">
+@extends('layouts.app')
 
-    <!-- MARCA DE AGUA DE FONDO -->
-    <div class="bg-watermark">WESTSIDE</div>
-
-    @include('partes.nav')
+@section('content')
 
     <!-- SECCIÓN INFORMACIÓN DE CONTACTO -->
     <section class="legal-section">
@@ -31,11 +25,9 @@
                 <li style="margin-bottom: 20px;">
                     <strong>Teléfono / WhatsApp:</strong> +54 9 3795 193973
                     <br><br>
-                    <!-- Agregamos el CDN de Bootstrap Icons temporalmente para que el ícono funcione -->
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-                    
-                    <a href="https://wa.me/5493795193973" target="_blank" class="btn btn-success font-weight-bold" style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                        <i class="bi bi-whatsapp"></i> Enviar WhatsApp
+                    <a href="https://wa.me/5493795193973" target="_blank" style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 700;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.124 1.528 5.855L0 24l6.335-1.51A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.37l-.36-.214-3.727.977.994-3.634-.234-.373A9.77 9.77 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+                        Enviar WhatsApp
                     </a>
                 </li>
                 <li><strong>Correo Electrónico:</strong> westside.ctes@gmail.com</li>
@@ -50,101 +42,4 @@
             </ul>
         </div>
     </section>
-
-    @include('partes.formulario_contacto', ['paddingTop' => '0'])
-
-    @include('partes.footer')
-
-    <!-- ESTILOS ESPECÍFICOS PARA ESTA PÁGINA -->
-    <style>
-        .legal-section {
-            padding-top: calc(var(--nav-height) + 60px);
-            padding-bottom: 50px;
-            position: relative;
-            z-index: 1; /* Por encima de la marca de agua */
-        }
-
-        .legal-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--bg-card);
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-        }
-
-        .legal-container h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-            color: #fff;
-            font-family: var(--font-impact);
-            text-transform: uppercase;
-        }
-
-        .legal-container .text-center {
-            text-align: center;
-        }
-
-        .legal-container .last-update {
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .legal-container h3 {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-family: var(--font-impact);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .legal-container p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            color: #ccc;
-        }
-
-        .legal-container ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .legal-container li {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #ccc;
-            margin-bottom: 10px;
-        }
-
-        .legal-container strong {
-            color: #fff;
-        }
-
-        .legal-container hr {
-            border: 0;
-            height: 1px;
-            background: var(--border-color);
-            margin: 30px 0;
-        }
-
-        @media (max-width: 768px) {
-            .legal-container {
-                padding: 30px 20px;
-                margin: 0 15px;
-            }
-            .legal-container h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</body>
-</html>
+@endsection

@@ -4,22 +4,18 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Producto; // Le decimos al portero dónde está tu modelo
 
 Route::get('/', function () {
-    // 1. Buscamos TODOS los productos en la base de datos (COMENTADO PARA USO ESTATICO)
+    // Para activar el catálogo dinámico, descomentar:
     // $productos = Producto::all();
-    
-    $productos = []; // Arreglo vacío para que no falle el compact
-    
-    // 2. Se los enviamos a tu vista 'Principal'
-    return view('Principal', compact('productos'));
+    // return view('Principal', compact('productos'));
+    return view('Principal');
 });
 
 Route::get('/catalogo', function () {
     return view('Catalogo');
 });
 
-Route::get('/principal', function () {
-    return view('Principal');
-});
+// Redirige /principal a / (compatibilidad con links anteriores)
+Route::redirect('/principal', '/');
 
 Route::get('/quienes-somos', function () {
     return view('quienes-somos');
@@ -36,6 +32,11 @@ Route::get('/comercializacion', function () {
 Route::get('/contacto', function () {
     return view('Contacto');
 });
+
+Route::get('/consultas', function () {
+    return view('Consultas');
+});
+
 
 Route::get('/turnos', function () {
     return view('Turnos');

@@ -54,28 +54,7 @@
     </div>
 </section>
 
-<style>
-    .wsp-form-section { padding: 70px 20px; background: rgba(255,255,255,0.02); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
-    .wsp-form-container { max-width: 1100px; margin: 0 auto; }
-    .wsp-form-header { text-align: center; margin-bottom: 40px; }
-    .wsp-form-header h2 { font-family: var(--font-impact); font-size: 2.2rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-main); margin: 0 0 10px; }
-    .wsp-form-header p { font-size: 0.95rem; color: var(--text-muted); }
-    .wsp-form-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; max-width: 720px; margin: 0 auto; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-    .input-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-    .input-group label { font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); }
-    .input-group input, .input-group select, .input-group textarea {
-        background: rgba(255,255,255,0.05); border: 1px solid var(--border-color);
-        border-radius: 10px; padding: 12px 16px; color: var(--text-main);
-        font-size: 0.95rem; font-family: inherit; outline: none; transition: border-color 0.3s ease;
-    }
-    .input-group select option { background: #1a1a1a; }
-    .input-group input:focus, .input-group select:focus, .input-group textarea:focus { border-color: #25D366; }
-    .btn-full-wsp { width: 100%; justify-content: center; padding: 15px; font-size: 1rem; }
-    @media (max-width: 900px) {
-        .form-row { grid-template-columns: 1fr; }
-    }
-</style>
+
 
 <script>
     // Generador de mensaje desde formulario
