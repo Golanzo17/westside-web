@@ -1,82 +1,23 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Database\Seeder;
-use App\Models\Categoria;
-use App\Models\Producto;
 
+use App\Models\User;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-
-
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        
-        // 1. Creamos las Categorías
-        $catRemeras = Categoria::create(['nombre' => 'Remeras']);
-        $catPantalones = Categoria::create(['nombre' => 'Pantalones']);
-        $catBuzos = Categoria::create(['nombre' => 'Buzos']);
-        
-        // 2. Creamos los Productos
+        // User::factory(10)->create();
 
-        // Agregamos un producto a la categoría de Buzos:
-        Producto::create([
-            'categoria_id' => $catBuzos->id, // << Aquí hacemos la conexión usando la variable
-            
-            'nombre' => 'Buzo Altered Black',
-            'descripcion' => 'Diseñado para destacar, el buzo "ALTERED" combina estilo urbano con comodidad absoluta. Con un corte boxy fit que aporta un calce amplio y moderno, este buzo es ideal para quienes buscan un look relajado sin perder presencia.
-
-Confeccionado en algodón frisado de alta calidad, ofrece abrigo suave por dentro, ideal para los días frescos. Presenta detalles gráficos imponentes: número "00" y texto "VISION" al frente, estampas en mangas tipo llamas y frase en el cuello para un plus de identidad visual.',
-             'stock' => 15, // Aquí agregamos el stock
-            'precio' => 45000.00, 
-            'imagen_frente' => '/images/Catalogo/ropa/Buzo-Altered.webp',
-            'imagen_espalda' => '/images/Catalogo/ropa/Buzo-Altered-detalle.webp', // Opcional, si la tienes
-            'imagen_detalle' => '/images/Catalogo/ropa/Buzo-Altered-dorso.webp' // Podemos poner 'null' si no tenemos foto de detalle aún
-        ]);
-
-         // ---- PRODUCTO 2: REMERAS ----
-        Producto::create([
-            'categoria_id' => $catRemeras->id, 
-            'nombre' => 'Remera TREWA Boxy',
-            'descripcion' => 'Una prenda de estilo ATHLETIC.
-
-Confeccionada en jersey puro algodón, con calce Boxy y estampa en serigrafía en el pecho.',
-            'stock' => 30, // Tenemos bastantes remeras
-            'precio' => 24000.00, 
-            
-            'imagen_frente' => '/images/Catalogo/ropa/Remera-Trewa-Boxy.webp',
-            'imagen_espalda' => '/images/Catalogo/ropa/Remera-Trewa-Dorso.webp', 
-            'imagen_detalle' => null 
-        ]);
-
-        Producto::create([
-            'categoria_id' => $catRemeras->id, 
-            'nombre' => 'Remera ELYSEES boxy',
-            'descripcion' => 'Confeccionada en jersey puro algodón, con calce Boxy y estampa en serigrafía tanto en el frente como en espalda.
-Esta misma cuenta con un lavado Acidwash que logra un efecto de desgaste vintage.',
-            'stock' => 19, 
-            'precio' => 24000.00, 
-            
-            'imagen_frente' => '/images/Catalogo/ropa/Remera-ELYSEES.webp',
-            'imagen_espalda' => '/images/Catalogo/ropa/Remera-ELYSEES-dorso.webp', 
-            'imagen_detalle' => null 
-        ]);
-
-        // ---- PRODUCTO 3: PANTALONES ----
-        Producto::create([
-            'categoria_id' => $catPantalones->id, 
-            'nombre' => 'Golden Resilence',
-            'descripcion' => 'Elevá tu estilo con este pantalón de jean de corte amplio (wide leg), ideal para quienes buscan un look urbano con personalidad. Su lavado gris oscuro con efecto desgastado le da un aire vintage único, mientras que el bordado trasero en tono dorado aporta un detalle distintivo y de alta calidad que no pasa desapercibido.',
-            'stock' => 8, // Quedan pocos
-            'precio' => 55000.00, 
-            
-            'imagen_frente' => '/images/Catalogo/ropa/Jean-Resilence.jpeg',
-            'imagen_espalda' => '/images/Catalogo/ropa/Jean-Resilence-Dorso.jpeg', 
-            'imagen_detalle' => '/images/Catalogo/ropa/Jean-Resilence-Detalle.jpeg' 
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
